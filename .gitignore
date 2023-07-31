@@ -1,0 +1,8 @@
+#
+# Untrack files
+#
+
+out/
+.vs/
+Debug/
+*.vcxproj*
