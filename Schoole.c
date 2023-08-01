@@ -1,7 +1,5 @@
 #pragma once
 #define _CRT_SECURE_NO_WARNINGS
-
-#include <stdio.h>
 #include "Student.h"
 #include "StudentList.h"
 
@@ -39,7 +37,7 @@ void initSchool(char* fileName) {
 			grades[i - 5] = atoi(tokens[i]);
 		}
 
-		if(school[level][classNum] == NULL)
+		if (school[level][classNum] == NULL)
 			school[level][classNum] = createNode(createStudent(tokens[0], tokens[1], tokens[2], grades));
 		else {
 			StudentList* newNode = createNode(createStudent(tokens[0], tokens[1], tokens[2], grades));
@@ -49,4 +47,13 @@ void initSchool(char* fileName) {
 	}
 
 	fclose(openFile);
+}
+
+void printSchool() {
+	for (size_t level = 0; level < LEVELS_NUMBER; ++level) {
+		for (size_t classNum = 0; classNum < CLSSES_NUMBER; ++classNum) {
+			printStudentList(level, classNum, school[level][classNum]);
+		}
+		printf("\n====================================================================\n");
+	}
 }

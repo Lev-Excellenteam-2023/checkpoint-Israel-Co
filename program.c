@@ -8,7 +8,7 @@ extern CLSSES_NUMBER;
 
 int main() {
 	initSchool("students_with_class.txt");
-	// printSchool();
+	printSchool();
 	return 0;
 }
 

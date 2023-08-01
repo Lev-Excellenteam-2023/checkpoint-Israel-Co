@@ -22,3 +22,12 @@ void freeStudentList(StudentList* head) {
 		freeStudentList(tmp);
 	}
 }
+
+void printStudentList(int level, int classNum, StudentList* studentList) {
+	StudentList* studprinter = studentList;
+	while (studprinter != NULL) {
+		printStudent(level, classNum, studprinter->value);
+		printf("\n--------------------------------------------------------------------\n");
+		studprinter = studprinter->next;
+	}
+}

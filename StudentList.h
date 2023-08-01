@@ -9,3 +9,5 @@ typedef struct studentList {
 StudentList* createNode(Student* student);
 
 void freeStudentList(StudentList* head);
+
+void printStudentList(int level, int classNum, StudentList* studentList);
