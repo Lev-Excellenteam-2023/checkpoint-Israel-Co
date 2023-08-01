@@ -8,6 +8,4 @@ typedef struct studentList {
 
 StudentList* createNode(Student* student);
 
-// void addStudent(StudentList* studentList, Student* student);
-
 void freeStudentList(StudentList* head);

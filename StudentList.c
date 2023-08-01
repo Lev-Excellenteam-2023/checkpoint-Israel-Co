@@ -11,19 +11,6 @@ StudentList* createNode(Student* student) {
 	return newStudent;
 }
 
-//void addStudent(StudentList* studentList, Student* student) {
-//	StudentList* newStudent = (StudentList*)malloc(sizeof(StudentList));
-//	if (studentList == NULL) {
-//		studentList = newStudent;
-//		newStudent->next = NULL;
-//	}
-//	else {
-//		newStudent->next = studentList->next;
-//		studentList->next = newStudent;
-//	}
-//	newStudent->value = student;
-//}
-
 void freeStudentList(StudentList* head) {
 	if (head == NULL) {
 		return;

@@ -46,19 +46,7 @@ void initSchool(char* fileName) {
 			newNode->next = school[level][classNum]->next;
 			school[level][classNum]->next = newNode;
 		}
-
-		// addStudent(school[level][classNum], createStudent(tokens[0], tokens[1], tokens[2], grades));
 	}
 
 	fclose(openFile);
 }
-
-//void addStudent(StudentList* studentList, Student* student) {
-//	if (studentList == NULL)
-//		studentList = 
-//	else {
-//		StudentList* newNode = createNode(student);
-//		newNode->next = studentList->next;
-//		studentList->next = newNode;
-//	}
-//}

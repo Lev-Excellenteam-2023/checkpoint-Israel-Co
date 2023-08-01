@@ -13,6 +13,4 @@ typedef struct {
 	int grades[NUM_OF_COURSES];
 } Student;
 
- 
-
 Student* createStudent(char* _firstName, char* _lastName, char* phone_num, int* _grades);
