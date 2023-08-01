@@ -6,6 +6,8 @@ typedef struct studentList {
 	struct studentList* next;
 } StudentList;
 
-void addStudent(StudentList* studentList, Student* student);
+StudentList* createNode(Student* student);
+
+// void addStudent(StudentList* studentList, Student* student);
 
 void freeStudentList(StudentList* head);

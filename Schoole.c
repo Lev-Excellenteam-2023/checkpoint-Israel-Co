@@ -39,9 +39,26 @@ void initSchool(char* fileName) {
 			grades[i - 5] = atoi(tokens[i]);
 		}
 
+		if(school[level][classNum] == NULL)
+			school[level][classNum] = createNode(createStudent(tokens[0], tokens[1], tokens[2], grades));
+		else {
+			StudentList* newNode = createNode(createStudent(tokens[0], tokens[1], tokens[2], grades));
+			newNode->next = school[level][classNum]->next;
+			school[level][classNum]->next = newNode;
+		}
 
-		addStudent(school[level][classNum], createStudent(tokens[0], tokens[1], tokens[2], grades));
+		// addStudent(school[level][classNum], createStudent(tokens[0], tokens[1], tokens[2], grades));
 	}
 
 	fclose(openFile);
 }
+
+//void addStudent(StudentList* studentList, Student* student) {
+//	if (studentList == NULL)
+//		studentList = 
+//	else {
+//		StudentList* newNode = createNode(student);
+//		newNode->next = studentList->next;
+//		studentList->next = newNode;
+//	}
+//}

@@ -3,18 +3,26 @@
 
 #include "StudentList.h"
 
-void addStudent(StudentList* studentList, Student* student) {
+
+StudentList* createNode(Student* student) {
 	StudentList* newStudent = (StudentList*)malloc(sizeof(StudentList));
-	if (studentList == NULL) {
-		studentList = newStudent;
-		newStudent->next = NULL;
-	}
-	else {
-		newStudent->next = studentList->next;
-		studentList->next = newStudent;
-	}
 	newStudent->value = student;
+	newStudent->next = NULL;
+	return newStudent;
 }
+
+//void addStudent(StudentList* studentList, Student* student) {
+//	StudentList* newStudent = (StudentList*)malloc(sizeof(StudentList));
+//	if (studentList == NULL) {
+//		studentList = newStudent;
+//		newStudent->next = NULL;
+//	}
+//	else {
+//		newStudent->next = studentList->next;
+//		studentList->next = newStudent;
+//	}
+//	newStudent->value = student;
+//}
 
 void freeStudentList(StudentList* head) {
 	if (head == NULL) {
