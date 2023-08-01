@@ -1,4 +1,5 @@
 #pragma once
+#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -14,3 +15,5 @@ typedef struct {
 } Student;
 
 Student* createStudent(char* _firstName, char* _lastName, char* phone_num, int* _grades);
+
+void printStudent(Student* student);

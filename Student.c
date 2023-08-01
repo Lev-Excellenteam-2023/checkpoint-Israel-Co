@@ -16,3 +16,16 @@ Student* createStudent(char* _firstName, char* _lastName, char* phoneNum, int* _
 
 	return student;
 }
+
+void printStudent(int level, int classNum, Student* student) {
+	printf("First Name: %s \n", student->firstName);
+	printf("Last Name: %s \n", student->lastName);
+	printf("Phone: %s \n", student->phoneNumber);
+	printf("Level: %d \n", level);
+	printf("Class: %d \n", classNum);
+	printf("Grades:");
+
+	for (size_t i = 0; i < NUM_OF_COURSES; i++) {
+		printf(" %d", student->grades[i]);
+	}
+}
