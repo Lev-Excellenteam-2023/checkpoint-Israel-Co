@@ -49,6 +49,14 @@ void initSchool(char* fileName) {
 	fclose(openFile);
 }
 
+void freeSchool() {
+	for (size_t level = 0; level < LEVELS_NUMBER; level++) {
+		for (size_t classNum = 0; classNum < CLSSES_NUMBER; classNum++) {
+			freeStudentList(school[level][classNum]);
+		}
+	}
+}
+
 void printSchool() {
 	for (size_t level = 0; level < LEVELS_NUMBER; ++level) {
 		for (size_t classNum = 0; classNum < CLSSES_NUMBER; ++classNum) {
