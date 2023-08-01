@@ -31,7 +31,7 @@ void initSchool(char* fileName) {
 		}
 
 		level = atoi(tokens[3]) - 1;
-		classNum = atoi(tokens[4] - 1);
+		classNum = atoi(tokens[4]) - 1;
 		for (size_t i = 5; i < FIELDS_NUM; i++)
 		{
 			grades[i - 5] = atoi(tokens[i]);
@@ -54,6 +54,5 @@ void printSchool() {
 		for (size_t classNum = 0; classNum < CLSSES_NUMBER; ++classNum) {
 			printStudentList(level, classNum, school[level][classNum]);
 		}
-		printf("\n====================================================================\n");
 	}
 }

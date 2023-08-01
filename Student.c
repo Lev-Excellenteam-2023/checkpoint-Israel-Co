@@ -3,8 +3,6 @@
 
 #include "Student.h"
 
-int counter = 1;
-
 Student* createStudent(char* _firstName, char* _lastName, char* phoneNum, int* _grades) {
 	Student* student = (Student*)malloc(sizeof(Student));
 
@@ -20,7 +18,6 @@ Student* createStudent(char* _firstName, char* _lastName, char* phoneNum, int* _
 }
 
 void printStudent(int level, int classNum, Student* student) {
-	printf("Student %d: \n", counter++);
 	printf("First Name: %s \n", student->firstName);
 	printf("Last Name: %s \n", student->lastName);
 	printf("Phone: %s \n", student->phoneNumber);

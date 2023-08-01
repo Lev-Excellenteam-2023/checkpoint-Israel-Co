@@ -16,4 +16,4 @@ typedef struct {
 
 Student* createStudent(char* _firstName, char* _lastName, char* phone_num, int* _grades);
 
-void printStudent(Student* student);
+void printStudent(int level, int classNum, Student* student);
