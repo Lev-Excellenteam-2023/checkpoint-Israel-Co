@@ -16,10 +16,10 @@ void freeStudentList(StudentList* head) {
 		return;
 	}
 	else {
-		StudentList* tmp = head->next;
+		freeStudentList(head->next);
 		head->next = NULL;
 		free(head->value);
-		freeStudentList(tmp);
+		free(head);
 	}
 }
 
