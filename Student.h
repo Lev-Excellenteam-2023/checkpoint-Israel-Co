@@ -7,8 +7,8 @@
 #define NUM_OF_DIGITS_PHONE 11
 
 typedef struct {
-	char* firstName[NAME_LEN];
-	char* lastName[NAME_LEN];
+	char firstName[NAME_LEN];
+	char lastName[NAME_LEN];
 	char phoneNumber[NUM_OF_DIGITS_PHONE];
 	int grades[NUM_OF_COURSES];
 } Student;
